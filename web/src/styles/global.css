@@ -1,0 +1,28 @@
+:root {
+  --color-bg-gradient: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+  --color-bg: #ebf2f5;
+  --color-text: #fff;
+  --color-primary: #15c3d6;
+  --color-primary-light: #17d6eb;
+  --color-primary-lighter: #96feff;
+  --color-secondary: #ffd666;
+  --color-secondary-dark: #8d734b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+body,
+input,
+button,
+textarea {
+  font: 600 18px 'Nunito', sans-serif;
+}
