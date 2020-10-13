@@ -48,17 +48,37 @@ $ cd web
 $ npm install
 // ou yarn
 
-# Rodar aplicação web (cd web)
+# Iniciar a aplicação
 $ npm start
 // ou yarn start
+```
+
+## 💾 Backend
+
+```bash
+# Instale as dependências dentro do diretório backend
+$ cd backend
+$ npm install
+// ou yarn
+
+# Iniciar a aplicação
+$ npm run dev
+// ou yarn dev
 ```
 
 # 👨‍💻 Tecnologias
 
 - [Typescript](https://www.typescriptlang.org/)
+- [NodeJS](https://nodejs.org/en/)
+- [Express](https://expressjs.com/pt-br/)
 - [ReactJS](https://pt-br.reactjs.org/)
+- [TypeORM](https://typeorm.io/#/)
 - [React Router](https://reactrouter.com/web/guides/quick-start)
 - [React Leaflet](https://react-leaflet.js.org/)
+
+Para mais detalhes sobre recursos e tecnologias:
+
+- [README do Backend](https://github.com/marcosribeirodacunha/happy/tree/master/backend)
 
 # 🎞 Créditos
 

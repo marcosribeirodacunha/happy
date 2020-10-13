@@ -1,0 +1,199 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2020-10-13T18:36:13.695Z",
+  "__export_source": "insomnia.desktop.app:v2020.4.1",
+  "resources": [
+    {
+      "_id": "req_88601bd197334396a8ab21b0aebcd934",
+      "parentId": "fld_5eb363f0ad3e4274b62583305a6770b8",
+      "modified": 1602602268778,
+      "created": 1602601964082,
+      "url": "{{ baseURL }}/{{ resource }}",
+      "name": "Index",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1602598249893,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_5eb363f0ad3e4274b62583305a6770b8",
+      "parentId": "wrk_2fa1fe05769846c4beaf925f95b79aa3",
+      "modified": 1602602249628,
+      "created": 1602602192905,
+      "name": "Orphanages",
+      "description": "",
+      "environment": { "resource": "orphanages" },
+      "environmentPropertyOrder": { "&": ["resource"] },
+      "metaSortKey": -1602602192906,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_2fa1fe05769846c4beaf925f95b79aa3",
+      "parentId": null,
+      "modified": 1602598179297,
+      "created": 1602598179297,
+      "name": "NLW #3",
+      "description": "",
+      "scope": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_26f23ea811dc4f4fa32b342483341d26",
+      "parentId": "fld_5eb363f0ad3e4274b62583305a6770b8",
+      "modified": 1602613616312,
+      "created": 1602602183823,
+      "url": "{{ baseURL }}/{{ resource }}/:id",
+      "name": "Show",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1602598249843,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_472b86d9eb5f4b8eb556bbcfa5585c1f",
+      "parentId": "fld_5eb363f0ad3e4274b62583305a6770b8",
+      "modified": 1602613698647,
+      "created": 1602598249843,
+      "url": "{{ baseURL }}/{{ resource }}",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "multipart/form-data",
+        "params": [
+          {
+            "name": "name",
+            "value": "string",
+            "description": "",
+            "id": "pair_99a390281e1e435e8d603d92f1745f8b"
+          },
+          {
+            "name": "latitude",
+            "value": "decimal (2,10)",
+            "description": "",
+            "id": "pair_80224b50f5594f468629db36736a1e92"
+          },
+          {
+            "name": "longitude",
+            "value": "decima (2,10)",
+            "description": "",
+            "id": "pair_f2317ab028a0453d9fb8ba2097baa397"
+          },
+          {
+            "name": "about",
+            "value": "string",
+            "description": "",
+            "id": "pair_b5d689a9872d483aab3f2581dfec98e7"
+          },
+          {
+            "name": "instructions",
+            "value": "string",
+            "description": "",
+            "id": "pair_42e0576d09634ab1847527548fb84df3"
+          },
+          {
+            "name": "opening_hours",
+            "value": "string",
+            "description": "",
+            "id": "pair_000e1ab1100546a9bccaf78da3b560a5"
+          },
+          {
+            "name": "open_on_weekends",
+            "value": "true",
+            "description": "",
+            "id": "pair_808e0394bf95464bbbda18f00c9f207b"
+          },
+          {
+            "name": "images",
+            "value": "",
+            "description": "",
+            "id": "pair_c510bf5e091946cc898d9b8fd4772e33",
+            "type": "file",
+            "fileName": ""
+          },
+          {
+            "name": "images",
+            "value": "",
+            "description": "",
+            "id": "pair_6c6234c6f2014617a44e15b28bffc191",
+            "type": "file",
+            "fileName": ""
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "multipart/form-data",
+          "id": "pair_891ba081d0634cd6bc1ba07797570ca5"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1602598249793,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_95397bb33a16aa554440d43f6aa89b42c68d13cf",
+      "parentId": "wrk_2fa1fe05769846c4beaf925f95b79aa3",
+      "modified": 1602598228376,
+      "created": 1602598179387,
+      "name": "Base Environment",
+      "data": { "baseURL": "http://localhost:3333" },
+      "dataPropertyOrder": { "&": ["baseURL"] },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1602598179387,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_95397bb33a16aa554440d43f6aa89b42c68d13cf",
+      "parentId": "wrk_2fa1fe05769846c4beaf925f95b79aa3",
+      "modified": 1602598179393,
+      "created": 1602598179393,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_58401449fa954438a700f65470592050",
+      "parentId": "wrk_2fa1fe05769846c4beaf925f95b79aa3",
+      "modified": 1602598179311,
+      "created": 1602598179311,
+      "fileName": "NLW #3",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}
