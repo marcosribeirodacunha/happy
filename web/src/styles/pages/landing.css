@@ -21,7 +21,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  background: url('../../src/assets/background.svg') no-repeat 80% center;
+  background: url('../../assets/background.svg') no-repeat 80% center;
 }
 
 #page-landing .content-wrapper main {
