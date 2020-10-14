@@ -62,6 +62,10 @@ $ cd backend
 $ npm install
 // ou yarn
 
+# Criar as tabelas no banco de dados
+$ npm run typeorm migration:run
+// ou yarn typeorm migration:run
+
 # Iniciar a aplicação
 $ npm run dev
 // ou yarn dev
@@ -80,6 +84,7 @@ $ npm run dev
 Para mais detalhes sobre recursos e tecnologias:
 
 - [README do Backend](https://github.com/marcosribeirodacunha/happy/tree/master/backend)
+- [README do Frontend (web)](https://github.com/marcosribeirodacunha/happy/tree/master/web)
 
 # 🎞 Créditos
 
