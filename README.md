@@ -71,12 +71,35 @@ $ npm run dev
 // ou yarn dev
 ```
 
+## 📱 Mobile
+
+**Importante:** Ao inicar a aplicação siga os seguintes passos:
+
+- Será aberta uma página em seu navegador. Confira nesta o endereço de IP localizado proximo a tab LAN;
+- Verifique se este IP condiz com o mesmo localizado nos campos:
+  - `url` localizado em `backend/src/views/images_view.ts`
+  - `baseURL` localizado em `mobile/src/services/api`.
+- Caso os mesmo não condizam, troque seus valores pelo IP observado no inicio deste processo.
+
+```bash
+# Instale as dependências dentro do diretório backend
+$ cd mobile
+$ npm install
+// ou yarn
+
+# Iniciar a aplicação
+$ npm start
+// ou yarn start
+```
+
 # 👨‍💻 Tecnologias
 
 - [Typescript](https://www.typescriptlang.org/)
 - [NodeJS](https://nodejs.org/en/)
 - [Express](https://expressjs.com/pt-br/)
 - [ReactJS](https://pt-br.reactjs.org/)
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.io/)
 - [TypeORM](https://typeorm.io/#/)
 - [React Router](https://reactrouter.com/web/guides/quick-start)
 - [React Leaflet](https://react-leaflet.js.org/)
@@ -85,6 +108,7 @@ Para mais detalhes sobre recursos e tecnologias:
 
 - [README do Backend](https://github.com/marcosribeirodacunha/happy/tree/master/backend)
 - [README do Frontend (web)](https://github.com/marcosribeirodacunha/happy/tree/master/web)
+- [README do Mobile](https://github.com/marcosribeirodacunha/happy/tree/master/mobile)
 
 # 🎞 Créditos
 
