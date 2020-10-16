@@ -82,7 +82,7 @@ $ npm run dev
 - Caso os mesmo não condizam, troque seus valores pelo IP observado no inicio deste processo.
 
 ```bash
-# Instale as dependências dentro do diretório backend
+# Instale as dependências dentro do diretório mobile
 $ cd mobile
 $ npm install
 // ou yarn
