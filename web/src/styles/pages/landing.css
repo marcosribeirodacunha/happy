@@ -2,6 +2,7 @@
   width: 100vw;
   height: 100vh;
   background: var(--color-bg-gradient);
+  overflow: hidden;
 
   display: flex;
   justify-content: center;
@@ -57,11 +58,13 @@
   font-weight: 800;
 }
 
-.content-wrapper .enter-app {
+.content-wrapper .enter-app-container {
   position: absolute;
   right: 0;
   bottom: 0;
+}
 
+.content-wrapper .enter-app {
   width: 80px;
   height: 80px;
   background: var(--color-secondary);

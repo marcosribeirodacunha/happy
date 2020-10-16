@@ -9,6 +9,7 @@ import mapIcon from '../utils/mapIcon';
 import Sidebar from '../components/Sidebar';
 
 import '../styles/pages/orphanage.css';
+import { motion } from 'framer-motion';
 
 interface Orphanage {
   latitude: number;
@@ -45,8 +46,13 @@ export default function Orphanage() {
       <Sidebar />
 
       <main>
-        <div className="orphanage-details">
-          <img
+        <motion.div
+          className="orphanage-details"
+          initial={{ opacity: 0, y: -300 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+        >
+          <motion.img
             src={orphanage.images[activeImageIndex].url}
             alt={orphanage.name}
           />
@@ -131,7 +137,7 @@ export default function Orphanage() {
               Entrar em contato
             </button> */}
           </div>
-        </div>
+        </motion.div>
       </main>
     </div>
   );

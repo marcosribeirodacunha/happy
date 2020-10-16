@@ -9,6 +9,7 @@ import '../styles/pages/create-orphanage.css';
 import { LeafletMouseEvent } from 'leaflet';
 import api from '../services/api';
 import { useHistory } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function CreateOrphanage() {
   const [position, setPosition] = useState({ latitude: 0, longitude: 0 });
@@ -72,7 +73,13 @@ export default function CreateOrphanage() {
       <Sidebar />
 
       <main>
-        <form className="create-orphanage-form" onSubmit={handleSubmit}>
+        <motion.form
+          className="create-orphanage-form"
+          onSubmit={handleSubmit}
+          initial={{ opacity: 0, y: -300 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+        >
           <fieldset>
             <legend>Dados</legend>
 
@@ -183,7 +190,7 @@ export default function CreateOrphanage() {
           <button className="confirm-button" type="submit">
             Confirmar
           </button>
-        </form>
+        </motion.form>
       </main>
     </div>
   );

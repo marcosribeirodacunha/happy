@@ -1,6 +1,7 @@
 #page-map {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 
   position: relative;
   display: flex;
@@ -40,15 +41,28 @@
 
 #page-map .leaflet-container {
   z-index: 5;
+  animation: fade 0.5s ease-in-out backwards;
+  animation-delay: 0.2s;
 }
 
-#page-map .create-orphanage {
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#page-map .create-orphanage-container {
   position: absolute;
   right: 40px;
   bottom: 40px;
-
   z-index: 10;
+}
 
+#page-map .create-orphanage {
   width: 64px;
   height: 64px;
   background: var(--color-primary);

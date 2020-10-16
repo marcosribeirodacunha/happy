@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FiArrowRight, FiPlus } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { Map, Marker, TileLayer, Popup } from 'react-leaflet';
+import { motion } from 'framer-motion';
 import api from '../services/api';
 
 import mapIcon from '../utils/mapIcon';
@@ -18,14 +19,26 @@ interface Orphanage {
 
 const OrphanagesMap: React.FC = () => {
   const [orphanages, setOrphanages] = useState<Orphanage[]>([]);
+  const [initialPosition, setInitialPosition] = useState<[number, number]>([
+    0,
+    0,
+  ]);
 
   useEffect(() => {
+    navigator.geolocation.getCurrentPosition(position => {
+      const { latitude, longitude } = position.coords;
+      setInitialPosition([latitude, longitude]);
+    });
     api.get('orphanages').then(res => setOrphanages(res.data));
   }, []);
 
   return (
     <div id="page-map">
-      <aside>
+      <motion.aside
+        initial={{ opacity: 0, x: -440 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+      >
         <header>
           <img src={mapMarkerImg} alt="Happy" />
 
@@ -37,10 +50,10 @@ const OrphanagesMap: React.FC = () => {
           <strong>Volta Redonda</strong>
           <span>Rio de Janeiro</span>
         </footer>
-      </aside>
+      </motion.aside>
 
       <Map
-        center={[-22.5074429, -44.0852054]}
+        center={initialPosition}
         zoom={14}
         style={{ width: '100%', height: '100%' }}
       >
@@ -69,9 +82,16 @@ const OrphanagesMap: React.FC = () => {
         ))}
       </Map>
 
-      <Link to="/orphanages/create" className="create-orphanage">
-        <FiPlus size={32} />
-      </Link>
+      <motion.div
+        className="create-orphanage-container"
+        initial={{ opacity: 0, y: 300 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+      >
+        <Link to="/orphanages/create" className="create-orphanage">
+          <FiPlus size={32} />
+        </Link>
+      </motion.div>
     </div>
   );
 };
