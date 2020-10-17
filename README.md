@@ -57,6 +57,16 @@ $ cd happy
     - Substitua pelo IP de conexão com [Expo](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=pt_BR) com :3333 no final (ex: `http://192.168.1.10:3333`);
     - Nesse caso, também é importante colocar esse mesmo IP de conexão na `baseURL` dentro do arquivo `mobile/src/services/api.ts`.
 
+- No arquivo `.env` de `/backend` modifique as seguintes variáveis com os valores relativos ao banco de dados postgres:
+
+  - `TYPEORM_HOST`
+  - `TYPEORM_PORT`
+  - `TYPEORM_USERNAME`
+  - `TYPEORM_PASSWORD`
+  - `TYPEORM_DATABASE`
+
+- Crie um banco de dados com o mesmo nome do valor inserido na váriável `TYPEORM_DATABASE`.
+
 ## 💻 Web
 
 ```bash
