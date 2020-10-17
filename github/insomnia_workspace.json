@@ -127,6 +127,12 @@
             "id": "pair_808e0394bf95464bbbda18f00c9f207b"
           },
           {
+            "name": "whatsapp",
+            "value": "string",
+            "description": "",
+            "id": "pair_000e1ab1100546a9bccaf78da3b560a5"
+          },
+          {
             "name": "images",
             "value": "",
             "description": "",
