@@ -34,6 +34,7 @@ class OrphanagesController {
       instructions,
       opening_hours,
       open_on_weekends,
+      whatsapp,
     } = req.body;
 
     const requestImages = req.files as Express.Multer.File[];
@@ -49,6 +50,7 @@ class OrphanagesController {
       instructions,
       opening_hours,
       open_on_weekends: open_on_weekends === 'true',
+      whatsapp,
       images,
     };
 
@@ -60,6 +62,12 @@ class OrphanagesController {
       instructions: Yup.string().required(),
       opening_hours: Yup.string().required(),
       open_on_weekends: Yup.boolean().required(),
+      whatsapp: Yup.string()
+        .matches(
+          /(\(?\d{2}\)?)?(\d{4,5}\d{4})/,
+          'It must be a valid phone number',
+        )
+        .required(),
       images: Yup.array(
         Yup.object().shape({
           path: Yup.string().required(),
