@@ -37,11 +37,27 @@ $ git clone https://github.com/marcosribeirodacunha/happy.git
 $ cd happy
 ```
 
+### ❗ Importante
+
+- Renomei o arquivo `.env.example` para `.env` dentro de `/backend` e `/web`
+
+- Para renderizar o mapa, crie uma conta grátis em [mapbox](https://www.mapbox.com/) e insira sua chave pública no arquivo `.env` de `/web`, conforme solicitado:
+
+  - `REACT_APP_MAPBOX_TOKEN=INSIRA_SUA_CHAVE_DO_MAPBOX_AQUI`
+
+- No arquivo `.env` de `/backend`, substituir conforme solicitado:
+
+  - `API_URL=http://LOCALHOST:3333_OU_URLEXPO:3333`
+
+  - Caso queira testar apenas a parte **web** da aplicação:
+
+    - Substitua por `http://localhost:3333`
+
+  - Caso queira testar apenas a parte **mobile**, ou a **mobile** em conjunto com a **web**:
+    - Substitua pelo IP de conexão com [Expo](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=pt_BR) com :3333 no final (ex: `http://192.168.1.10:3333`);
+    - Nesse caso, também é importante colocar esse mesmo IP de conexão na `baseURL` dentro do arquivo `mobile/src/services/api.ts`.
+
 ## 💻 Web
-
-Antes de iniciar a aplicação web crie uma conta em [mapbox](https://www.mapbox.com/) e copie o access token em sua conta. Logo após renomeie o arquivo `.env.example` para `.env` e insira seu token na variavel `REACT_APP_MAPBOX_TOKEN`.
-
-Logo após realize os seguintes passos:
 
 ```bash
 # Instale as dependências dentro do diretório web
@@ -72,14 +88,6 @@ $ npm run dev
 ```
 
 ## 📱 Mobile
-
-**Importante:** Ao inicar a aplicação siga os seguintes passos:
-
-- Será aberta uma página em seu navegador. Confira nesta o endereço de IP localizado proximo a tab LAN;
-- Verifique se este IP condiz com o mesmo localizado nos campos:
-  - `url` localizado em `backend/src/views/images_view.ts`
-  - `baseURL` localizado em `mobile/src/services/api`.
-- Caso os mesmo não condizam, troque seus valores pelo IP observado no inicio deste processo.
 
 ```bash
 # Instale as dependências dentro do diretório mobile

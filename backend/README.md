@@ -30,5 +30,5 @@ Para testar a aplicação utilizando o Insomnia clique no botão abaixo para cri
 - [Express](https://expressjs.com/pt-br/)
 - [Multer](https://www.npmjs.com/package/multer)
 - [TypeORM](https://typeorm.io/#/)
-- [Sqlite](https://www.sqlite.org/index.html)
+- [Postgres](https://www.postgresql.org/)
 - [Yup](https://www.npmjs.com/package/yup)

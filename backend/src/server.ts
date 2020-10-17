@@ -4,6 +4,7 @@ import 'express-async-errors';
 import path from 'path';
 import cors from 'cors';
 
+import './database/connection';
 import routes from './routes';
 import errorHandler from './errors/handler';
 
@@ -15,4 +16,6 @@ app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
 app.use(routes);
 app.use(errorHandler);
 
-app.listen(3333, () => console.log('--- Server running on port 3333 ---'));
+const PORT = process.env.PORT || 3333;
+
+app.listen(PORT, () => console.log(`--- Server running on port ${PORT} ---`));
