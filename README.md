@@ -15,6 +15,7 @@
 </p>
 
 <p align="center">
+  <a href="#-recursos">Recursos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-créditos">Créditos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -24,6 +25,13 @@
 <p align="center">
   <img src="./github/happy-mobile.png" width="21%">&nbsp;&nbsp;<img src="./github/happy-web.png" width="74%">
 </p>
+
+# 🗃 Recursos
+
+- [x] Cadastro de orfanatos com imagens
+- [x] Listagem de todos os orfanatos
+- [x] Listagem de um único orfanato
+- [x] Entrar em contato via whatsapp
 
 # ⚙ Instalação
 
